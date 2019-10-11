@@ -1,0 +1,14 @@
+{
+  "SchemaVersion": 1,
+  "Name": "rtcore_softpwm_example",
+  "ComponentId": "1f6f2bb0-4b68-492f-be14-c6a774799557",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [],
+  "Capabilities": {
+    "AllowedConnections": [],
+    "Gpio": [ 0, 8, 12 ],
+    "Uart": [],
+    "WifiConfig": false
+  },
+  "ApplicationType": "RealTimeCapable"
+}
