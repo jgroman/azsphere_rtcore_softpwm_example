@@ -5,7 +5,7 @@
 * @authors Jaroslav Groman
 *
 * @par Project Name
-*      RTCore App Software PWM Demo
+*      Azure Sphere Software PWM for RTCore App
 *
 * @par Description
 *    .
@@ -98,7 +98,8 @@ __attribute__((used)) = {
     [INT_TO_EXC(2)... INT_TO_EXC(INTERRUPT_COUNT - 1)] = 
         (uintptr_t)DefaultExceptionHandler};
 
-static _Noreturn void DefaultExceptionHandler(void)
+static _Noreturn void 
+DefaultExceptionHandler(void)
 {
     for (;;) {
         // empty.
@@ -182,7 +183,8 @@ handle_irq_button_timer(void)
         handle_irq_button_timer);
 }
 
-static _Noreturn void RTCoreMain(void)
+static _Noreturn void 
+RTCoreMain(void)
 {
     // SCB->VTOR = ExceptionVectorTable
     WriteReg32(SCB_BASE, 0x08, (uint32_t)ExceptionVectorTable);
